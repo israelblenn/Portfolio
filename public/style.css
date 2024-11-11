@@ -1333,6 +1333,7 @@ main{
 
   .fullscreen-btn, .reset-btn {
     position: relative;
+    visibility: hidden;
   }
 
   .fonts{
