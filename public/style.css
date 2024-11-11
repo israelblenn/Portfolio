@@ -998,9 +998,12 @@ _::-webkit-full-page-media, _:future, :root .invertBackground {
 
 /* /LISMORE-BAPTIST ========================================================================================================== */
 
+.display-desktop{ display: block; }
+.display-mobile{ display: none; }
 
 main{
-  width: 115.2rem;
+  max-width: 120.2rem;
+  padding: 2.5rem;
   margin: 19.2rem auto;
 }
 
@@ -1016,7 +1019,75 @@ main{
   margin-bottom: 2.4rem;
 }
 
+.frame-container {
+  width: 100%;
+  height: 52rem;
+  overflow: hidden;
+  border: 1px solid #000;
+  position: relative;
+  margin: 8rem 0;
+  display: flex;
+  justify-content: center;
+  cursor: grab;
+}
 
+.frame-button-container {
+  display: grid;
+  position: absolute;
+  right: 10px;
+  gap: 8px;
+}
+
+.fullscreen-btn, .reset-btn {
+  padding: 0;
+  cursor: pointer;
+  z-index: 10;
+  backdrop-filter: unset;
+  background: unset;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen-btn:hover, .reset-btn:hover {
+  background: unset;
+}
+
+.fullscreen {
+  background-color: white;
+}
+
+.branding-images{
+  float: right; 
+  margin: 2.4rem 0 0 12rem; 
+  display: grid; 
+  gap: 24px; 
+  justify-items: center;
+}
+
+.mockup{
+  margin-top: 12rem;
+}
+
+.site-layout{
+  margin: 12rem 0 16rem 0;
+}
+
+.pattern{
+  margin: 8rem 0; 
+  height: 39.1rem; 
+  width: 100%; 
+  object-fit: contain;
+}
+
+.fonts{
+  margin: 8rem 0 11rem 0; 
+  height: 16rem; 
+  width: 100%;
+  object-fit: contain;
+}
 
 
 /* =========================================================================================================================== */
@@ -1200,5 +1271,81 @@ main{
     height: calc(100vw - 50px);
     margin-top: 20px;
   }
+
+
+
+
+  /* LBC */
+
+  .display-desktop{ display: none; }
+  .display-mobile{ display: block; }
+
+  main{
+    margin: 0;
+  }
+  
+  .return, .return:hover{
+    display: none;
+  }
+
+  .church{
+    width: 100%;
+  }
+  
+  .mockup{
+    display: none;
+  }
+
+  .logomark{
+    width: 80%;
+  }
+
+  .branding-images{
+    width: 100vw;
+    margin: 64px 0 40px -25px;
+    float:none; 
+  }
+
+  .site-layout{   
+    margin: 8rem 0;
+    width: 100%;
+  }
+
+  .pattern{
+    height: auto; 
+  }
+
+
+  .frame-container {
+    margin: 6.4rem 0;
+    height: auto;
+    aspect-ratio: 5/3;
+  }
+
+  hr{
+    margin: 10rem 0;
+  }
+
+  .frame-button-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .fullscreen-btn, .reset-btn {
+    position: relative;
+  }
+
+  .fonts{
+
+    height: auto;
+
+    margin: 5rem 0;
+
+    /* margin: 8rem 0 11rem 0;  */
+    /* height: 16rem;  */
+    /* width: 100%; */
+    /* object-fit: contain; */
+  }
+
 
 }

@@ -11,45 +11,7 @@
     <!-- <script defer src="grimoire.js"></script> -->
     
     <style>
-        .frame-container {
-            width: 100%;
-            height: 52rem;
-            overflow: hidden;
-            border: 1px solid #000;
-            position: relative;
-            margin: 8rem 0;
-            display: flex;
-            justify-content: center;
-            cursor: grab;
-        }
 
-        .frame-button-container {
-            display: grid;
-            position: absolute;
-            right: 10px;
-            gap: 8px;
-        }
-
-        .fullscreen-btn, .reset-btn {
-            padding: 0;
-            cursor: pointer;
-            z-index: 10;
-            backdrop-filter: unset;
-            background: unset;
-            height: 24px;
-            width: 24px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .fullscreen-btn:hover, .reset-btn:hover {
-            background: unset;
-        }
-
-        .fullscreen {
-            background-color: white;
-        }
 
         html { scroll-behavior: smooth; }
 
@@ -59,7 +21,7 @@
 
 
 
-<body> <!-- onload="unveil()" -->
+<body>
   
     <main>
 
@@ -67,27 +29,35 @@
             <h1>Lismore Baptist</h1>
             <a class="return" href="../">Return</a>
         </div>
-        <span>July 2023 (near-complete) &nbsp; | &nbsp; <a href="">www.lismorebaptist.org.au</a></span>
+        <span>July 2023 &nbsp;|&nbsp; (near-complete)</span>
         <p style="margin: 8.8rem 0 12rem 0;">
             I was approached by Lismore Baptist Church (LBC) to reimagine their visual identity with the goal of modernizing it to appeal to younger members of the community, while still respecting 
             its historic roots and the values of its existing congregation. This re-brand would be centred around the creation of a new website hosting a robust sermon streaming platform, but would 
             also include a logo redesign and the production of multiple other pieces of branded material.
         </p>
 
-        <div style="float: right; margin: 2.4rem 0 0 12rem; display: grid; gap: 24px; justify-items: center;">
-            <img src="../media/lbc/church.png" alt="lismore baptist church">
-            <img src="../media/lbc/arrow.svg" alt="arrow" height="80px">
-            <img src="../media/lbc/logomark.svg" alt="lismore baptist church logo">
-        </div>
-        <h3>Branding</h3>
-        <p> 
+        <h3 class="display-mobile">Branding</h3>
+        <p class="display-mobile"> 
             While meeting LBC’s Senior Pastor, we identified their iconic church building as most community members’ primary point of reference for the church. The church sits at a high point in the 
             city and features a large outward-facing stained-glass window. Considering this, I settled on a logo design that clearly alludes to the silhouette of the church building and its window.
             <br><br>
             The Logo also considers the established Baptist symbol of the dove descending from heaven during Jesus’ baptism. And additionally, the criss-cross armature that separates the fragments of 
             the logo in negative space, sets the groundwork for a more abstract representation of LBC’s core vision for fostering a “diverse network of worshipping communities”.
         </p>
-        <img src="../media/lbc/mockup.png" alt="logo mockup" style="margin-top: 12rem;">
+        <div class="branding-images">
+            <img class="church" src="../media/lbc/church.png" alt="lismore baptist church">
+            <img src="../media/lbc/arrow.svg" alt="arrow" height="80px">
+            <img class="logomark" src="../media/lbc/logomark.svg" alt="lismore baptist church logo">
+        </div>
+        <h3 class="display-desktop">Branding</h3>
+        <p class="display-desktop"> 
+            While meeting LBC’s Senior Pastor, we identified their iconic church building as most community members’ primary point of reference for the church. The church sits at a high point in the 
+            city and features a large outward-facing stained-glass window. Considering this, I settled on a logo design that clearly alludes to the silhouette of the church building and its window.
+            <br><br>
+            The Logo also considers the established Baptist symbol of the dove descending from heaven during Jesus’ baptism. And additionally, the criss-cross armature that separates the fragments of 
+            the logo in negative space, sets the groundwork for a more abstract representation of LBC’s core vision for fostering a “diverse network of worshipping communities”.
+        </p>
+        <img class="mockup" src="../media/lbc/mockup.png" alt="logo mockup">
 
         <hr>
         
@@ -97,11 +67,12 @@
             critical UX issues. In my redesign I managed to halve the number of pages on the site while maintaining all of the existing content. I also ensured that each page was at most two 
             clicks away from the landing page.
         </p>
+        <img src="../media/lbc/site-layout.png" alt="site layout" class="site-layout">
         <p>
             My first proposed design for the website used a repeating pattern modified from the branching structure of the logo. This pattern was also used subtly across the rest of the LBC’s branded 
             material, tying the church’s visual identity together across its various touch points.
         </p>
-        <img src="../media/lbc/site-layout.png" alt="site layout" style="margin: 12rem 0 13.6rem 0;">
+        <img src="../media/lbc/pattern.png" alt="network pattern" class="pattern">
         <p>
             Throughout the design process, I also made sure to constantly orient my design around the original goal of advertising the church to outsiders, especially to younger members of the 
             community. For LBC this meant including as many real photos of the church and—more importantly—church-members as possible (at least for the outward-facing pages of the site). Photos of 
@@ -115,7 +86,8 @@
             the body text, I chose the serif Warnock Pro to ground the site with a more traditional feel, and more abstractly, to once again reflect the church’s desire to project a contemporary 
             image while still respecting its history.
         </p>
-        <img src="../media/lbc/pattern.png" alt="network pattern" style="margin: 8rem 0; height: 39.1rem; width: 100%; object-fit: contain;">
+        <img src="../media/lbc/fonts.svg" alt="typefaces" class="fonts">
+
         <p>Below is a high-res mock-up of the initial website design.</p>
 
         <div class="frame-container">
