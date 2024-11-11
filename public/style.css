@@ -1,0 +1,1204 @@
+:root {
+  font-size: min(10px, 1.1363636363636363636vh); /* 100vh/880 ; THIS IS FOR SETTING THE REM UNIT */
+  --shadow: drop-shadow(0px 0px min(10px, 1.1363636363636363636vh) rgba(0, 0, 0, 0.2));
+  --works: 4; /* number of works */
+  /* --color: rgb(255, 234, 0) */
+
+  /* --invertColour: rgb(0, 21, 255); */
+  /* --secondaryColour: #ff9900; */
+
+  /* --secondaryColour: #f3df00; */
+  /* --primaryColour: #eeda00; */
+  /* --invertColour: rgb(0, 14, 163); */
+
+  --invertColour: #FFEA00;;
+  --primaryColour: #0015ff;
+  --secondaryColour: #0015ff;
+
+
+
+  /* --colour: #FFEA00; */
+}
+
+* {
+  box-sizing: border-box;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("media/fonts/HelveticaNeue.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("media/fonts/HelveticaNeueItalic.woff2") format("woff2");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("media/fonts/HelveticaNeueMedium.woff2") format("woff2");
+  font-weight: 500;
+}
+
+
+
+
+
+/* TAGS */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 1.6rem;
+  width: 100vw;
+}
+
+p{
+  line-height: calc(1ex / 0.32);
+  margin: 0;
+}
+
+h1{
+  font-size: 7.8rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+h2{
+  font-size: 6.9rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+h3{
+  font-size: 4rem;
+  font-weight: normal;
+  margin: 0 0 5.6rem 0;
+}
+
+h4{
+  font-size: 1.92rem;
+  font-weight: normal;
+  margin: 0 0 1rem 0;
+}
+
+a{
+  line-height: calc(1ex / 0.32);
+  margin: 0;
+  pointer-events: all;
+  color: #0015ff;
+  transition: 200ms;
+}
+
+a:hover{
+  color: #0015ff;
+}
+
+.black{
+  color: #000;
+}
+
+hr{
+  margin: 12rem 0;
+}
+
+button{
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  pointer-events: all;
+  cursor: pointer;
+
+  padding:
+    0.6rem
+    1.2rem
+    0.6rem
+    1.2rem
+  ;
+
+  transition: background-color 200ms;
+  margin-top: 1rem;
+  
+  border: 0;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+button:hover{
+  background-color: rgba(235, 235, 235, 0.5);
+}
+
+ul{
+  margin: 0;
+  padding-left: 2.5rem;
+}
+
+li{
+  font-size: 1.4rem;
+  line-height: calc(1ex / 0.32);
+  list-style-type: none;
+  cursor: pointer;
+  padding: 0.1rem 0.6rem 0 0.2rem;
+}
+
+li li{
+  font-size: 1.4rem;
+  line-height: calc(1ex / 0.32);
+  font-style: italic;
+}
+
+
+
+
+
+/* hide letter svgs for matter.js*/
+.letters {
+  display: none;
+}
+
+
+
+
+.veil{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  display: flex;
+  pointer-events: none;
+}
+
+@-webkit-keyframes example {to {-webkit-backdrop-filter: blur(0);backdrop-filter: blur(0)}}
+
+@keyframes example {to {-webkit-backdrop-filter: blur(0);backdrop-filter: blur(0)}}
+
+
+
+
+/* .progressBar{
+  margin: auto;
+  width: 300px;
+  height: 5px;
+  border: 1px solid rgb(224, 224, 224);
+}
+
+.load{
+  height: 100%;
+  width: 0px;
+  background-color: rgb(224, 224, 224);
+} */
+
+/* progress{
+  width: 300px;
+  margin: auto;
+  -webkit-appearance: none;
+  appearance: none;
+
+  border-radius: 2px;
+  height: 5px;
+  background-image: black;
+} */
+
+
+
+
+
+/* CURSOR */
+
+.cursor{
+  position: fixed;
+  z-index: 1;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  background-color: rgb(0, 221, 255);
+  /* background-color: rgb(163, 97, 194); */
+  mix-blend-mode: exclusion;
+  pointer-events: none;
+  transition: margin 150ms, transform 150ms cubic-bezier(0.25, 0, 0, 0.25);
+  visibility: hidden;
+}
+
+.spawnAnimation{
+  transform: scale(1) translate(calc(-50%), calc(-50%));
+}
+
+.hoverFocus{
+  transform: scale(0.3);
+  margin: -2rem 0 0 -2rem;
+}
+
+.hoverExpand{
+  transform: scale(1.5) translate(calc(-50%/1.5), calc(-50%/1.5));
+}
+
+
+
+
+
+/* CONTAINERS */
+
+#matter-container{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pin-container {
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+  position: absolute;
+  overflow: hidden;
+}
+
+.full-width-container {
+  width: calc(100vw + 178rem + (110rem * var(--works)));  /* profile width (100vw) + work width (4600px) + contact width (1580px) */
+  height: 100%;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+}
+
+.content{
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-content: center;
+}
+
+.content li{
+  pointer-events: all;
+}
+
+.mobile{
+  display: none;
+}
+
+
+
+
+
+/* PROFILE =================================================================================================================== */
+
+.home{
+  width: 100vw;
+}
+
+.profileWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 30rem;
+  margin-left: calc(90vw - 30rem);
+
+  right: 10vw; /* <—— review this */
+  /* position: absolute; */
+}
+
+.profile{
+  height: 70rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.profilePicture{
+  width: 100%;
+  pointer-events: all;
+
+  aspect-ratio: 1;
+  object-fit: cover;
+  overflow-clip-margin: unset; /* insures antialiasing in chromium */
+}
+
+.skeleton{
+  width: 30rem;
+  position: absolute;
+  z-index: 1;
+  mix-blend-mode: luminosity;
+  aspect-ratio: 1;
+  object-fit: cover;
+  overflow-clip-margin: unset;
+}
+
+@-moz-document url-prefix() {
+  .skeleton{
+    display: none;
+  }
+}  
+
+.bio::after{
+  content: "I work with clients to design and build beautiful, research-backed, human-centered, responsive and optimised websites to capture and illuminate their brand’s unique visual identity.";
+}
+
+@-moz-document url-prefix() {
+  .bio, .bio::after{
+    -webkit-text-fill-color: unset !important;
+  }
+}  
+
+
+.siteMap{
+  display: flex;
+}
+
+.siteMap li:hover{
+  mix-blend-mode: difference;
+  background: rgb(255, 234, 0);
+  background-clip: none;
+  -webkit-background-clip: none;
+  -webkit-text-fill-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  -webkit-animation: blinker 0.5s linear infinite;
+          animation: blinker 0.5s linear infinite;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    background: rgb(255, 234, 0);
+    background-clip: none;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: rgb(0, 0, 0);
+  }
+  51% {
+    mix-blend-mode: difference;
+    background: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    mix-blend-mode: difference;
+    background: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+  }
+}
+
+@keyframes blinker {
+  50% {
+    background: rgb(255, 234, 0);
+    background-clip: none;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: rgb(0, 0, 0);
+  }
+  51% {
+    mix-blend-mode: difference;
+    background: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    mix-blend-mode: difference;
+    background: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+  }
+}
+
+.indentGuide{
+  border-left: 1px solid #ffffff;
+  height: auto;
+  margin: 0.3rem 0 0.3rem 0;
+}
+
+
+
+
+
+/* MY WORK =================================================================================================================== */
+
+.myWork{
+  height: 100%;
+  /* position: absolute; */
+  /* left: 100vw; */
+  padding: 0 20rem 0 20rem;
+  display: grid;
+  gap: 20rem;
+  grid-template-columns: repeat(var(--works), 1fr); 
+  /* margin-inline: auto; */
+}
+
+section{
+  position: relative;
+  padding: 0 10rem 0 10rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.workPreview{
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70rem;
+  aspect-ratio: 1;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #000000;
+}
+
+.images{
+  position: absolute;
+  height: 70rem;
+  aspect-ratio: 1;
+}
+
+
+
+
+/* Mark Bo Chu */
+
+.img-MBC1{
+  position: absolute;
+  width: 60%;
+  top: 21%;
+  left: 1%;
+  -webkit-filter: var(--shadow);
+          filter: var(--shadow);
+}
+
+.img-MBC2{
+  position: absolute;
+  width: 60%;
+  top: 44%;
+  left: 12%;
+  -webkit-filter: var(--shadow);
+          filter: var(--shadow);
+}
+
+.img-MBC3{
+  position: absolute;
+  width: 22%;
+  top: 17%;
+  left: 66%;
+  -webkit-filter: var(--shadow);
+          filter: var(--shadow);
+}
+
+.img-MBC4{
+  position: absolute;
+  width: 22%;
+  top: 21%;
+  left: 77%;
+  -webkit-filter: var(--shadow);
+          filter: var(--shadow);
+}
+
+
+
+
+/* Lismore Baptist Church */
+
+.img-LBC1{
+  position: absolute;
+  width: 50%;
+  top: 17%;
+  left: 2%;
+  border: 1px solid;
+  -o-border-image: linear-gradient(to bottom, lightgray, transparent) 1;
+     border-image: linear-gradient(to bottom, lightgray, transparent) 1;
+  -webkit-filter: var(--shadow);
+          filter: var(--shadow);
+}
+
+.img-LBC2{
+  position: absolute;
+  width: 50%;
+  top: 44%;
+  left: 24%;
+  border: 1px solid;
+  -o-border-image: linear-gradient(to bottom, transparent, lightgray) 1;
+     border-image: linear-gradient(to bottom, transparent, lightgray) 1;
+  -webkit-filter: var(--shadow);
+          filter: var(--shadow);
+}
+
+.img-LBC3{
+  position: absolute;
+  width: 22%;
+  top: 19%;
+  left: 72%;
+  -webkit-filter: var(--shadow);
+          filter: var(--shadow);
+}
+
+.img-LBC4{
+  position: absolute;
+  width: 22%;
+  top: 50%;
+  left: 72%;
+  -webkit-filter: var(--shadow);
+          filter: var(--shadow);
+}
+
+.img-LBCarrow{
+  position: absolute;
+  height: 6%;
+  top: 43%;
+  left: 82.3%;
+  -webkit-filter: var(--shadow);
+          filter: var(--shadow);
+}
+
+
+/* Visualising Personality */
+
+.img-VP{
+  position: absolute;
+  width: 83%;
+  top: 15.5%;
+  left: 8.5%;
+}
+
+
+/* Your Sky */
+
+.img-YS{
+  position: absolute;
+  width: 93%;
+  top: 19%;
+  left: 3.5%;
+  -webkit-filter: var(--shadow);
+          filter: var(--shadow);
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 20%;
+}
+
+.details{
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  height: 3.8rem;
+}
+
+.details p{
+ padding: 0.8rem 5px 0 0;
+}
+
+.details button{ margin-top: 0px; }
+
+.goIcon{
+  margin-left: 1.2rem;
+  transform: translate(0, 0.2rem);
+  height: 1.4rem;
+}
+
+.expandIcon{
+  margin-left: 1.2rem;
+  transform: translate(0, 0.2rem);
+  height: 1.4rem;
+  padding-bottom: 1px;
+}
+
+
+
+
+
+/* CONTACT ============================================================================================================== */
+
+.contact{
+  display: flex;
+  align-items: center;
+  padding-left: 50rem;
+  height: 100%;
+  width: 158rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+
+  mask: linear-gradient(
+    to left,
+    hsl(0, 0%, 0%) 70%,
+    hsla(0, 0%, 0%, 0.987) 72.43%,
+    hsla(0, 0%, 0%, 0.951) 74.65%,
+    hsla(0, 0%, 0%, 0.896) 76.75%,
+    hsla(0, 0%, 0%, 0.825) 78.7%,
+    hsla(0, 0%, 0%, 0.741) 80.59%,
+    hsla(0, 0%, 0%, 0.648) 82.36%,
+    hsla(0, 0%, 0%, 0.55) 84.13%,
+    hsla(0, 0%, 0%, 0.45) 85.87%,
+    hsla(0, 0%, 0%, 0.352) 87.64%,
+    hsla(0, 0%, 0%, 0.259) 89.41%,
+    hsla(0, 0%, 0%, 0.175) 91.3%,
+    hsla(0, 0%, 0%, 0.104) 93.25%,
+    hsla(0, 0%, 0%, 0.049) 95.35%,
+    hsla(0, 0%, 0%, 0.013) 97.57%,
+    hsla(0, 0%, 0%, 0) 100%
+  );
+  -webkit-mask: linear-gradient(
+    to left,
+    hsl(0, 0%, 0%) 70%,
+    hsla(0, 0%, 0%, 0.987) 72.43%,
+    hsla(0, 0%, 0%, 0.951) 74.65%,
+    hsla(0, 0%, 0%, 0.896) 76.75%,
+    hsla(0, 0%, 0%, 0.825) 78.7%,
+    hsla(0, 0%, 0%, 0.741) 80.59%,
+    hsla(0, 0%, 0%, 0.648) 82.36%,
+    hsla(0, 0%, 0%, 0.55) 84.13%,
+    hsla(0, 0%, 0%, 0.45) 85.87%,
+    hsla(0, 0%, 0%, 0.352) 87.64%,
+    hsla(0, 0%, 0%, 0.259) 89.41%,
+    hsla(0, 0%, 0%, 0.175) 91.3%,
+    hsla(0, 0%, 0%, 0.104) 93.25%,
+    hsla(0, 0%, 0%, 0.049) 95.35%,
+    hsla(0, 0%, 0%, 0.013) 97.57%,
+    hsla(0, 0%, 0%, 0) 100%
+  );
+}
+
+.credits{
+  height: 70rem;
+  margin-left: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.signature{
+  height: 8rem;
+  margin-top: 1rem;
+  transform: translate(-1.5rem, 1rem);
+}
+
+.barcode{
+  height: 3rem;
+  margin-bottom: 2rem;
+  transform: scaleY(1.3);
+}
+
+
+/* Contact Form */
+
+form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.4rem;
+  pointer-events: all;
+  width: 50rem;
+}
+
+label{
+  margin-top: 3.2rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+}
+
+input, textarea{
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 1px;
+  border-color: #747474;
+  height: 3.2rem;
+  font-size: 1.6rem;
+  padding: 0.8rem;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+input:hover{
+  border-color: var(--primaryColour);
+}
+
+textarea:hover{
+  border: solid 1px var(--primaryColour);
+  border-radius: 2px;
+}
+
+input:focus{
+  outline: none;
+  border-color: var(--primaryColour);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+textarea{
+  height: 24rem;
+  padding: 0.8rem;
+  resize: none;
+  border: none;
+}
+
+textarea:focus{
+  outline: none;
+  border: solid 1px var(--primaryColour);
+  border-radius: 2px;
+  padding: 0.7rem;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.splodge{
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-filter: blur(2rem);
+          filter: blur(2rem);
+  position: absolute;
+  z-index: -1;
+  width: 50rem;
+  height: 24rem;
+  border-radius: 4rem;
+  transform: scale(1.05) translateY(39.4rem);
+}
+
+.contactBtn{
+  width: 8rem;
+  height: 3.8rem;
+  align-self: flex-end;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.contactBtn:hover{
+  background-color: var(--secondaryColour);
+  color: white;
+}
+
+.contactForm{
+  height: 70rem;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* .h-captcha{
+  position: absolute;
+} */
+
+
+
+
+
+/* OUTLINE =================================================================================================================== */
+
+.outline {
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  bottom: 0;
+  left: 25vw;
+  width: 50vw;
+  opacity: 0;
+}
+
+.outlineLabels{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 0.2rem;
+}
+
+.splitShowcaseLabel{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  transform: translateX(-50%); 
+}
+
+.splitShowcaseLabel li{
+  padding: 0;
+}
+
+.scrollBar{
+  width: 100%;
+  height: 0.1rem;
+  -webkit-backdrop-filter: blur(0);
+          backdrop-filter: blur(0); /* idk why but this is necessary */
+  
+  mix-blend-mode: difference;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.thumb{
+  scale: 1.01 3;
+  border-top: solid 1px;
+}
+
+.homePortion, .contactPortion{
+  position: absolute;
+  border-top: solid 1px;
+}
+
+.workPortion{
+  position: absolute;
+  border-top: dashed 1px;
+}
+
+.scrollReminder {
+  position: fixed;
+  bottom: 2rem;
+  left: 50vw;
+  translate: -50%;
+  z-index: 1;
+  opacity: 0;
+  font-style: italic;
+  visibility: hidden;
+}
+
+.winker{
+  -webkit-animation: winker 3s ease-in-out infinite;
+          animation: winker 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes winker {
+  40% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes winker {
+  40% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.invert, .mobile .goIcon, .mobile .expandIcon{
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.details p{
+  padding: 6px 0 0 0;
+}
+
+
+
+
+
+/* The following is neccecary invert the text in a way that doesn't make it render chubby */
+.invertBackground, .bio, .bio::after, h4, .myWork p, .myWork h2, .contents, .mobile p, .mobile li, .mobile h2, .mobile button{
+  mix-blend-mode: difference;
+  background: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* transform: translate3d(0,0,0); */
+}
+
+
+
+
+
+
+/* anti-invert css for the outline in firefox */
+@-moz-document url-prefix(){
+  .invertBackground {
+    mix-blend-mode: normal;
+    background: none;
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: currentcolor;
+  }
+
+  h4 {
+    -webkit-text-fill-color: currentcolor;
+  }
+  
+  .invert{
+    filter: invert(0);
+  }
+}
+
+
+/* invert css for Safari 7.1+ */
+_::-webkit-full-page-media, _:future, :root .bio, h4, .myWork p, .myWork h2, .contents, .mobile p, li, .mobile h2, .mobile button {
+
+  mix-blend-mode: difference;
+  background: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translate3d(0,0,0);
+
+}
+/* anti-invert css for outline in Safari 7.1+ */
+_::-webkit-full-page-media, _:future, :root .invertBackground {
+
+  background: none;
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: currentcolor;
+
+}
+
+/* anti-invert css and hiding matter.js for IOS devices */
+@supports (-webkit-touch-callout: none) {
+  
+  /*
+    | Removed some of this because after fixing safari on desktop, safari mobile seems to work too.
+    | Having said that, it seems like iPhones don't respond to screen orientation?
+    | Hense why I'm hiding the letters.   
+  */
+  
+  /* .invertBackground, .bio, .bio::after, h4, .myWork p, .myWork h2, .contents, .mobile p, .mobile li, .mobile h2, .mobile button{
+    mix-blend-mode: normal;
+    background: unset;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    
+    color: #000000;
+  }
+
+  .invert, .mobile .goIcon, .mobile .expandIcon{
+    -webkit-filter: invert(0);
+    filter: invert(0);
+  } */
+
+  #matter-container{
+    display: none;
+  }
+}
+
+
+
+
+/* /LISMORE-BAPTIST ========================================================================================================== */
+
+
+main{
+  width: 115.2rem;
+  margin: 19.2rem auto;
+}
+
+.return, .return:hover{
+  text-decoration: none;
+  color: #000;
+  margin-top: 1.4rem;
+}
+
+.caseStudy-header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+
+
+
+
+/* =========================================================================================================================== */
+/*                                                         MOBILE                                                              */
+/* =========================================================================================================================== */
+
+.mobile{
+  height: 100vh;
+  height: 100svh;
+  width: 100vw;
+  padding: 25px;
+  font-size: 16px;
+  position: absolute;
+}
+
+.mobile-home{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(100vw - 50px);
+  height: calc(100vh - 50px);
+  height: calc(100svh - 50px);
+}
+
+.copyright{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.mobile-homeContent{
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-nav{
+  display: grid;
+}
+
+.divider {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-bottom: 0;
+  border-image-source: linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%);
+  margin: 0 -24px 0 -25px;
+  opacity: 0.2;
+}
+
+.workPage{
+  display: flex;
+  margin-left: 100vw;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  width: calc(100vw - 50px);
+  height: calc(100vh - 50px);
+  height: calc(100svh - 50px);
+}
+
+.workPageHeader{
+  width: 85px;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.workPageHeader:active::after{
+  display: none;
+}
+
+.workPageHeader img{
+  transform: rotate(180deg);
+  margin: 0;
+  height: 16px;
+}
+
+.workPageFooter{
+  justify-self: flex-end;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+  :root {
+    font-size: 10px; /* THIS IS FOR SETTING THE REM UNIT */
+  }
+
+  .mobile{ display: flex; }
+
+  .content{ display: none; }
+
+  .bio{
+    font-weight: 500;
+    font-size: 26px;
+  }
+
+  ul{
+    padding: 0;
+  }
+  
+  li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: inherit;
+  }
+
+  li:active::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: calc(1ex / 0.32);
+    left: 0;
+    background-image: linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.03) 10%, rgba(0, 0, 0, 0.03) 90%, transparent 100%);
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
+
+  button{
+    position: absolute;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    right: 0;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 26px;
+    pointer-events: all;
+    cursor: pointer;
+    z-index: 3;
+    padding: 6px 12px 6px 12px;
+  }
+
+  .miniButton{
+    position: relative;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .barcode{
+    height: 30px;
+    margin-bottom: 15px;
+  }
+
+  .goIcon{
+    margin-left: 8px;
+  }
+
+
+
+  .details{
+    margin-top: 15px;
+  }
+
+  .text{
+    margin-top: 70%;
+  }
+
+  .full-width-container {
+    width: calc(100vw);  /* profile width (100vw) + work width (3500px) + contact width (1580px) */
+  }
+  
+  .content{
+    flex-direction: column;
+  }
+
+  .workPreview{
+    height: auto;
+  }
+
+  .title{
+    font-size: 50px;
+  }
+
+  .images{
+    position: absolute;
+    width: 100%;
+    height: calc(100vw - 50px);
+    margin-top: 20px;
+  }
+
+}

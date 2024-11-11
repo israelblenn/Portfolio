@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  
+    <title>Israel Blennerhassett</title>
+
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link rel="icon" href="../media/icons/favicon.svg" type="image/svg+xml"/>
+
+    <link rel="stylesheet" href="../style.css">
+    <!-- <script defer src="grimoire.js"></script> -->
+    
+    <style>
+        .frame-container {
+            width: 100%;
+            height: 52rem;
+            overflow: hidden;
+            border: 1px solid #000;
+            position: relative;
+            margin: 8rem 0;
+            display: flex;
+            justify-content: center;
+            cursor: grab;
+        }
+
+        .frame-button-container {
+            display: grid;
+            position: absolute;
+            right: 10px;
+            gap: 8px;
+        }
+
+        .fullscreen-btn, .reset-btn {
+            padding: 0;
+            cursor: pointer;
+            z-index: 10;
+            backdrop-filter: unset;
+            background: unset;
+            height: 24px;
+            width: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fullscreen-btn:hover, .reset-btn:hover {
+            background: unset;
+        }
+
+        .fullscreen {
+            background-color: white;
+        }
+
+        html { scroll-behavior: smooth; }
+
+    </style>
+
+</head>
+
+
+
+<body> <!-- onload="unveil()" -->
+  
+    <main>
+
+        <div class="caseStudy-header">
+            <h1>Lismore Baptist</h1>
+            <a class="return" href="../">Return</a>
+        </div>
+        <span>July 2023 (near-complete) &nbsp; | &nbsp; <a href="">www.lismorebaptist.org.au</a></span>
+        <p style="margin: 8.8rem 0 12rem 0;">
+            I was approached by Lismore Baptist Church (LBC) to reimagine their visual identity with the goal of modernizing it to appeal to younger members of the community, while still respecting 
+            its historic roots and the values of its existing congregation. This re-brand would be centred around the creation of a new website hosting a robust sermon streaming platform, but would 
+            also include a logo redesign and the production of multiple other pieces of branded material.
+        </p>
+
+        <div style="float: right; margin: 2.4rem 0 0 12rem; display: grid; gap: 24px; justify-items: center;">
+            <img src="../media/lbc/church.png" alt="lismore baptist church">
+            <img src="../media/lbc/arrow.svg" alt="arrow" height="80px">
+            <img src="../media/lbc/logomark.svg" alt="lismore baptist church logo">
+        </div>
+        <h3>Branding</h3>
+        <p> 
+            While meeting LBC’s Senior Pastor, we identified their iconic church building as most community members’ primary point of reference for the church. The church sits at a high point in the 
+            city and features a large outward-facing stained-glass window. Considering this, I settled on a logo design that clearly alludes to the silhouette of the church building and its window.
+            <br><br>
+            The Logo also considers the established Baptist symbol of the dove descending from heaven during Jesus’ baptism. And additionally, the criss-cross armature that separates the fragments of 
+            the logo in negative space, sets the groundwork for a more abstract representation of LBC’s core vision for fostering a “diverse network of worshipping communities”.
+        </p>
+        <img src="../media/lbc/mockup.png" alt="logo mockup" style="margin-top: 12rem;">
+
+        <hr>
+        
+        <h3>Website</h3>
+        <p>
+            Prior to designing the church’s website I undertook a thorough assessment of their existing site. I identified the incoherent information architecture underlying it as one of its most 
+            critical UX issues. In my redesign I managed to halve the number of pages on the site while maintaining all of the existing content. I also ensured that each page was at most two 
+            clicks away from the landing page.
+        </p>
+        <p>
+            My first proposed design for the website used a repeating pattern modified from the branching structure of the logo. This pattern was also used subtly across the rest of the LBC’s branded 
+            material, tying the church’s visual identity together across its various touch points.
+        </p>
+        <img src="../media/lbc/site-layout.png" alt="site layout" style="margin: 12rem 0 13.6rem 0;">
+        <p>
+            Throughout the design process, I also made sure to constantly orient my design around the original goal of advertising the church to outsiders, especially to younger members of the 
+            community. For LBC this meant including as many real photos of the church and—more importantly—church-members as possible (at least for the outward-facing pages of the site). Photos of 
+            people have shown time and time again to radically increase trust online, and for an organisation like this where people are everything this principle is even more pertinent 
+            [<a href="#sources">jump to sources</a>]. Lismore Baptist had a fairly large amount of content, so in areas where it was necessary for text to take the spotlight I still made sure to insert 
+            photos as supporting design elements, sneaking them in behind blurs or as the background of banners.
+            <br><br>
+            To contrast the potentially busy pattern, bright colours and plethora of images I strictly adhered to an 8-pixel grid divided into 12 columns and limited the design language of the site 
+            to straight lines and flat textures. I also avoided using clear horizontal blocks to divide sections of content, instead relying on good typography to indicate where sections start and 
+            end. Regarding specific typefaces, I settled on Red Hat Display for most large text and headings; a friendly sans-serif font that closely mirrored the contours of the logomark. And for 
+            the body text, I chose the serif Warnock Pro to ground the site with a more traditional feel, and more abstractly, to once again reflect the church’s desire to project a contemporary 
+            image while still respecting its history.
+        </p>
+        <img src="../media/lbc/pattern.png" alt="network pattern" style="margin: 8rem 0; height: 39.1rem; width: 100%; object-fit: contain;">
+        <p>Below is a high-res mock-up of the initial website design.</p>
+
+        <div class="frame-container">
+            <div class="frame-button-container">
+                <button class="fullscreen-btn">
+                    <img src="../media/lbc/fullscreen.svg" class="fullscreen-icon" alt="">
+                    <img src="../media/lbc/minimise.svg" class="minimise-icon" style="display: none;" alt="">
+                </button>
+                <button class="reset-btn">
+                    <img src="../media/lbc/reset.svg" alt="">
+                </button>
+            </div>
+            <div class="frame-content">
+                <img src="../media/lbc/sitemockup1.webp" alt="Zoomable content" width="100%" style="translate: 0 40px; scale: 0.9; filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));">
+            </div>
+        </div>    
+        
+        <p>
+            I developed the site inside of the React framework and used open-source headless CMS, Strapi, to allow LBC to manage content in the backend. The site and its backend are both currently 
+            hosted on Render.
+            <br><br>
+            By far the most demanding part of coding Lismore Baptist’s site was in the creation of their new custom-built “Sermons” page, which gives visitors of the site access (via stream or 
+            download) to their large archive of recorded sermons, many of which came with supplementary resources such as study guides or newsletters. This involved designing and coding an 
+            audio-player component in JavaScript from the ground up, which could fetch the relevant data from Strapi and performantly deliver it to users in the front-end. The sermons system also 
+            allows users to explore different sermon series or filter the entire database by speaker.
+        </p>
+
+        <hr>
+
+        <h3>Revisions</h3>
+        <p>
+            The website was eventually released with some major revisions to bring it in line with LBC’s adjusted vision for their rebrand and the purpose of their site. These revisions most importantly 
+            included rolling back the logo to their previous design and removing the Members page from the site.
+            <br><br>
+            In the revised design below I redesigned the Home page to reintroduce some Christian symbology. The final design evokes the shape of a cross in white which reaches up to the top of the page 
+            from the hills in the “Who Are We” Section below (these were originally inspired by the church’s position on the crest of a hill).
+        </p>
+
+        <div class="frame-container">
+            <div class="frame-button-container">
+                <button class="fullscreen-btn">
+                    <img src="../media/lbc/fullscreen.svg" class="fullscreen-icon" alt="">
+                    <img src="../media/lbc/minimise.svg" class="minimise-icon" style="display: none;" alt="">
+                </button>
+                <button class="reset-btn">
+                    <img src="../media/lbc/reset.svg" alt="">
+                </button>
+            </div>
+            <div class="frame-content">
+                <img src="../media/lbc/sitemockup2.webp" alt="Zoomable content" width="100%" style="translate: 0 -90px; scale: 0.6; filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));">
+            </div>
+        </div>
+        
+        <hr>
+        
+        <p id="sources">
+            Riegelsberger, J., Sasse, M. A., & McCarthy, J. D.  (2003). Shiny happy people building trust?: photos on e-commerce websites and consumer trust. Proceedings of the SIGCHI conference on Human factors in computing systems. 
+            <br><a href="https://dl.acm.org/doi/abs/10.1145/642611.642634">https://dl.acm.org/doi/abs/10.1145/642611.642634</a>
+            <br><br>
+            Aldiri, K., Hobbs, D., Qahwaji, R. (2008). The Human Face of E-Business: Engendering Consumer Initial Trust Through the Use of Images of Sales Personnel on E-Commerce Web Sites. International Journal of E-Business Research. 
+            <br><a href="https://www.igi-global.com/article/human-face-business/1918">https://www.igi-global.com/article/human-face-business/1918</a>
+            <br><br>
+            Cyr, D., Head, M., Larios, H., Pan, B. (2009).
+            Exploring Human Images in Website Design Across Cultures: A Multi-Method Approach. MIS Quarterly. 
+            <br><a href="https://www.jstor.org/stable/20650308">https://www.jstor.org/stable/20650308</a>
+        </p>
+
+    </main>
+
+    <!-- Panzoom Library -->
+    <script src="https://cdn.jsdelivr.net/npm/panzoom@9.4.0/dist/panzoom.min.js"></script>
+
+    <!-- JavaScript for Panzoom Initialization -->
+    <script>
+        // Function to initialize Panzoom, fullscreen, and reset functionality for each frame
+        function initializeFrame(frameContainer) {
+            const frameContent = frameContainer.querySelector('.frame-content');
+            const fullscreenBtn = frameContainer.querySelector('.fullscreen-btn');
+            const resetBtn = frameContainer.querySelector('.reset-btn');
+            const fullscreenIcon = frameContainer.querySelector('.fullscreen-icon');
+            const minimiseIcon = frameContainer.querySelector('.minimise-icon');
+
+
+            // Initialize Panzoom
+            const panzoomInstance = panzoom(frameContent, {
+                maxZoom: 20,
+                minZoom: 0.5,
+                zoomSpeed: 0.1,
+            });
+    
+            // Set cursor for dragging
+            frameContainer.addEventListener('mousedown', () => {
+                frameContainer.style.cursor = 'grabbing';
+            });
+            frameContainer.addEventListener('mouseup', () => {
+                frameContainer.style.cursor = 'grab';
+            });
+    
+            // Fullscreen toggle functionality
+            fullscreenBtn.addEventListener('click', () => {
+                if (!document.fullscreenElement) {
+                    frameContainer.requestFullscreen().then(() => {
+                        frameContainer.classList.add('fullscreen');
+                        fullscreenIcon.style.display = 'none';
+                        minimiseIcon.style.display = 'block';
+                    }).catch(err => {
+                        console.log(`Error attempting to enable fullscreen mode: ${err.message}`);
+                    });
+                } else {
+                    document.exitFullscreen();
+                    fullscreenIcon.style.display = 'block';
+                    minimiseIcon.style.display = 'none';
+                }
+            });
+    
+            document.addEventListener('fullscreenchange', () => {
+                if (!document.fullscreenElement) {
+                    frameContainer.classList.remove('fullscreen');
+                }
+            });
+    
+            // Reset functionality
+            resetBtn.addEventListener('click', () => {
+                panzoomInstance.zoomAbs(0, 0, 1); // Reset zoom to 1
+                panzoomInstance.moveTo(0, 0);     // Reset position to (0, 0)
+            });
+        }
+            
+        // Select all frames and initialize them
+        document.querySelectorAll('.frame-container').forEach(initializeFrame);
+    </script>
+    
+    
+</body>
+</html>

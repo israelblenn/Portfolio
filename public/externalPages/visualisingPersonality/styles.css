@@ -1,0 +1,429 @@
+
+*{
+  margin:0PX;
+  padding:0px;
+  box-sizing:border-box;
+}
+
+:root {
+  font-size: min(1px, 0.1vh); /* THIS IS FOR SETTING THE REM UNIT */
+}
+
+a{
+  text-decoration: none;
+  color: #314fa8;
+}
+
+p{
+  font-family: "Helvetica";
+  font-size: 16rem;
+  font-weight: 400;
+  line-height: 20rem;
+}
+
+h2{
+  font-size: 20rem;
+  line-height: 30rem;
+  font-family: "Helvetica";
+  font-weight: 400;
+}
+
+p b{
+  font-weight: 600;
+}
+
+p i{
+  color: lightgray;
+}
+
+p em{
+  color: lightgray;
+  font-style: normal;
+}
+
+p img{
+  margin-top: 4rem;
+  height: 10rem;
+}
+
+br{
+  line-height: 23rem;
+}
+
+hr{
+  border: solid;
+  border-width: 1rem;
+  border-color: lightgray;
+}
+
+.wrapper{
+  max-width:1280rem;
+  margin:auto;
+}
+
+.heading{
+  display: none;
+  padding-top: 90;
+  margin-bottom: 50;
+  font-size: 90rem;
+  font-family: "Inter";
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: 1;
+  word-spacing: 20;
+}
+
+.main{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  transition: 0.8s;
+  transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+  height: 100vh;
+}
+
+.main p{
+  font-size: 20rem;
+  line-height: 30rem;
+  padding-top: 0rem;
+  padding-left: 60rem;
+  padding-right: 40rem;
+}
+
+.main p i{
+  color: black;
+}
+
+.main img{
+  width: 650rem;
+  height: 650rem;
+  transition: 0.5s;
+}
+
+.key{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 20rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  margin-top: -20rem;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.trait{
+  width: calc(100%/3);
+  margin-top: 50rem;
+}
+
+.traitb{
+  width: calc(100%/3);
+  margin-top: 50rem;
+  border-left: solid;
+  border-right: solid;
+  border-width: 2rem;
+  border-color: lightgray;
+}
+
+.traitd{
+  width: 100%;
+  text-align: center;
+  margin-top: 40rem;
+}
+
+.metakey{
+  width: 100%;
+  text-align: center;
+  margin-top: 40rem;
+}
+
+.innertraita{
+  display: flex;
+  flex-direction: row;
+  padding-right: 30rem;
+}
+
+.innertraitb{
+  display: flex;
+  flex-direction: row;
+  padding-left: 30rem;
+  padding-right: 30rem;
+}
+
+.innertraitc{
+  display: flex;
+  flex-direction: row;
+  padding-left: 30rem;
+}
+
+.text{
+  width: 70%;
+}
+
+.text h3{
+  position: absolute;
+}
+
+.image{
+  width: 30%;
+}
+
+.image img{
+  width: 100%;
+}
+
+.display{
+  display: flex;
+  flex-direction: row;
+  margin-top: 40rem;
+  margin-bottom: 60rem;
+  justify-content: center;
+}
+
+.familytree{
+  flex: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-image: url("media/familytree.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 900rem;
+  padding-top: 80rem;
+}
+
+.fta{
+  width: 40%;
+  padding-left: 5%;
+}
+.ftb{
+  width: 60%;
+}
+
+.form{
+  padding-left: 5%;
+  margin-top: 370rem;
+  pointer-events: none;
+}
+
+.button{
+  background-color: lightgray;
+  border: none;
+  color: black;
+  width: 100rem;
+  font-family: Helvetica;
+  text-align: center;
+  padding: 5 0;
+  display: inline-block;
+  font-size: 16rem;
+  border-radius: 5rem;
+  transition: 0.15s;
+  margin-right: 80rem;
+}
+
+.button:hover{
+  background-color: gray;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#defunct{
+  position: absolute;
+  z-index: 10;
+  font-size: 70rem;
+  transform: rotate(-30deg);
+  translate: 10rem 100rem;
+}
+
+.mobile{
+  display: none;
+}
+
+.moby{
+  display: none;
+}
+
+.fam{
+  display: none;
+}
+
+.cta{
+  display: none;
+}
+
+
+/* @media (-webkit-min-device-pixel-ratio: 1) {
+  :root {
+    zoom: 0.8;  
+    zoom: ;
+  }
+  .main{
+    height: 125vh;
+  }
+} */
+
+
+@media screen and (max-width:1280px){ :root {font-size: 1px;} /* ============================================================ */
+
+  .wrapper{
+    padding: 0 80px 0 80px;
+  }
+
+  p{
+    font-size: 33px;
+    line-height: 125%;
+    text-size-adjust: none;
+  }
+
+  .heading{
+    display: none;
+  }
+
+  .main{
+    height: 100vh;
+    flex-direction: column;
+    padding-bottom: 0px;
+  }
+  
+  .main p{
+    font-size: 33px;
+    line-height: 125%;
+    padding-top: 80px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  .main img{
+    width: 95%;
+    height: auto;
+    align-self: center;
+    margin-top: 0px;
+  }
+
+
+  .desktop{
+    display: none;
+  }
+  
+  .mobile{
+    display:block;
+  }
+
+  .esky{
+    display: none;
+  }
+
+  .moby{
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .key{
+    flex-direction: column;
+    margin-top: -100px;
+  }
+  
+  .trait{
+    width: calc(100%);
+    margin-top: 0px;
+  }
+  
+  .traitb{
+    width: calc(100%);
+    margin-top: 0px;
+    border-left: none;
+    border-right: none;
+    border-width: 0px;
+  }
+  
+  .traitd{
+    width: 100%;
+    text-align: center;
+    margin-top: 120px;
+  }
+  
+  .metakey{
+    text-align: left;
+    margin-top: 120px;
+  }
+  
+  .innertraita{
+    padding-right: 0px;
+  }
+  
+  .innertraitb{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  .innertraitc{
+    padding-left: 0px;
+  }
+  
+  .text{
+    width: 100%;
+  }
+
+  .text h3{
+    position: relative;
+    margin-top: 100px;
+    text-size-adjust: none;
+  }
+  
+  .image{
+    width: 30%;
+    height: 100%;
+  }
+  
+  .image img{
+    padding-top: 140px;
+    width: 100%;
+  }
+
+  .display{
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  
+  .familytree{
+    background-image:none;
+    height: auto;
+  }
+  
+  .fam{
+    display: block;
+    margin: 50px 0 50px 0;
+  }
+
+  h2{
+    font-size: 33px;
+    line-height: 125%;
+    text-size-adjust: none;
+  }
+
+  .fta{
+    width: 100%;
+    padding-left: 0%;
+  }
+  
+  .form{
+    display: none;
+  }
+  
+  .cta{
+    display: block;
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 33px;
+    font-family: "Helvetica";
+    font-weight: 400;
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+

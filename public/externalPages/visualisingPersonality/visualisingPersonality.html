@@ -1,0 +1,174 @@
+<html>
+
+  <!-- contact info at israelblennerhassett.com -->
+
+
+  <head>
+    <title>Visualising Personality</title>
+    <link rel="icon" type="image/x-icon" href="media/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Greensock -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CustomEase.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Rubik&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <div class="heading">
+        Visualising Personality
+      </div>
+
+      <div class="main" id="main">
+          <img id="star" src="media/average.png">
+          <div>
+            <p class="desktop">To the left is the average person, 65% sincere, 72.6% modest, he’s just like you and me - except he’s not. As it turns out we’re all special little snowflakes when it comes to personality, we’re certainly not all the same and we don’t really fit into personality <i>types</i> either (not for a lack of trying, I might add).<br><br>But I hear you, person, “I’m a person and I love identifying with things” — well look no further because, despite appearances, this isn’t just the average person, it’s also a cool way of transforming test results from one of the leading personality tests in the field of phycology (<a href="https://hexaco.org/">HEXACO-PI-R</a>) into a pretty symbol that you can look at and, best of all, identify with!</p>
+            <p class="mobile">Above is the average person, 65% sincere, 72.6% modest, he’s just like you and me - except he’s not. As it turns out we’re all special little snowflakes when it comes to personality, we’re certainly not all the same and we don’t really fit into personality <i>types</i> either (not for a lack of trying, I might add).<br><br>But I hear you, person, “I’m a person and I love identifying with things” — well look no further because, despite appearances, this isn’t just the average person, it’s also a cool way of transforming test results from one of the leading personality tests in the field of phycology (<a href="https://hexaco.org/">HEXACO-PI-R</a>) into a pretty symbol that you can look at and, best of all, identify with!</p>
+          </div>
+      </div>
+      <div class="key" id="key">
+        <div class="trait">
+          <div class="innertraita">
+            <div class="text">
+              <h3><p><b>Honesty-Humility</b> &nbsp<i>Size</i></p></h3><br>
+              <p>Sincerity &nbsp<i>Saturation</i></p>
+              <p>Fairness &nbsp<i>Hue</i> &nbsp<img src="media/fairness.png"></p>
+              <p>Greed Avoidance &nbsp<i>Curve</i></p>
+              <p>Modesty &nbsp<i>Brightness</i> <em>◺</em></p>
+            </div>
+            <div class="image">
+              <img src="media/h.png">
+            </div>
+          </div>
+        </div>
+        <div class="traitb">
+          <div class="innertraitb">
+            <div class="text">
+              <h3><p><b>Emotionality</b> &nbsp<i>Gradient End</i></p></h3><br>
+              <p>Fearfullness &nbsp<i>Brightness</i> <em>◺</em></p>
+              <p>Anxiety &nbsp<i>Saturation</i> <em>◺</em></p>
+              <p>Dependance &nbsp<i>Gradient Start</i></p>
+              <p>Sentimentality &nbsp<i>Hue</i> &nbsp<img src="media/sentimentality.png"></p>
+            </div>
+            <div class="image">
+              <img src="media/e.png">
+            </div>
+          </div>
+        </div>
+        <div class="trait">
+          <div class="innertraitc">
+            <div class="text">
+              <h3><p><b>Extraversion</b> &nbsp<i>Size</i></p></h3><br>
+              <p>Social Self-Esteem &nbsp<i>Saturation</i></p>
+              <p>Social Boldness &nbsp<i>Curve</i></p>
+              <p>Sociability &nbsp<i>Hue</i> &nbsp<img src="media/sociability.png"></p>
+              <p>Liveliness &nbsp<i>Brightness</i></p>
+            </div>
+            <div class="image">
+              <img src="media/x.png">
+            </div>
+          </div>
+        </div>
+        <div class="trait">
+          <div class="innertraita">
+            <div class="text">
+              <h3><p><b>Agreeableness</b> &nbsp<i>Gradient End</i></p></h3><br>
+              <p>Forgivingness &nbsp<i>Hue</i> &nbsp<img src="media/forgivingness.png"></p>
+              <p>Gentleness &nbsp<i>Saturation</i> <em>◺</em></p>
+              <p>Flexibility &nbsp<i>Gradient Start</i></p>
+              <p>Patience &nbsp<i>Brightness</i></p>
+            </div>
+            <div class="image">
+              <img src="media/a.png">
+            </div>
+          </div>
+        </div>
+        <div class="traitb">
+          <div class="innertraitb">
+            <div class="text">
+              <h3><p><b>Conscientiousness</b> &nbsp<i>Gradient End</i></p></h3><br>
+              <p>Organisation &nbsp<i>Saturation</i> <em>◺</em></p>
+              <p>Diligence &nbsp<i>Hue</i> &nbsp<img src="media/diligence.png"></p>
+              <p>Perfectionism &nbsp<i>Brightness</i></p>
+              <p>Prudence &nbsp<i>Gradient Start</i></p>
+            </div>
+            <div class="image">
+              <img src="media/c.png">
+            </div>
+          </div>
+        </div>
+        <div class="trait">
+          <div class="innertraitc">
+            <div class="text">
+              <h3><p><b>Openness to Experience</b> &nbsp<i>Size (Points)</i></p></h3><br>
+              <p>Aesthetic Appreciation &nbsp<i>Size (Dips)</i></p>
+              <p>Inquisitiveness &nbsp<i>Curve (Points)</i> <em>◺</em></p>
+              <p>Creativity &nbsp<i>Curve (Dips)</i></p>
+              <p>Unconventionality &nbsp<i>No. of Points</i></p>
+            </div>
+            <div class="image">
+              <img src="media/o.png">
+            </div>
+          </div>
+        </div>
+        <div class="traitd">
+          <p>Altruism &nbsp<i>No. of Points (Outer Star)</i></p>
+        </div>
+        <div class="metakey">
+          <p>
+            <em class="esky">Meta-key: The titles in bold describe "traits" whereas the subtitles describe four "facets" that those traits are made up of. The "Altruism" facet above doesn't belong to any trait group.
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp The "◺" symbol means that a trait or facet's score is reversed when determining this variable. E.g. MORE fearfullness equals LESS brightness, not the other way around.
+            </em>
+            <em class="moby">Meta-key: The titles in bold describe "traits" whereas the subtitles describe four "facets" that those traits are made up of. The "Altruism" facet above doesn't belong to any trait group.
+            The "◺" symbol means that a trait or facet's score is reversed when determining this variable. E.g. MORE fearfullness equals LESS brightness, not the other way around.
+            </em>
+          </p>
+        </div>
+      </div>
+      <hr id="break">
+      <div class="display">
+        <div class="familytree">
+          <div class="fta">
+            <h2>If you’re all good on identity, well there are other uses as well. Meet my family (I’m second from the left, in the blue), as you can see we’ve all got a lot in common yet still enough differences to argue about for the next few decades. Very Insightful.</h2>
+          </div>
+          <img class="fam" src="media/familytree.svg" alt="my family tree">
+          <div class="ftb">
+          </div>
+          <div class="form">
+            <p id="defunct">DEFUNCT</p>
+            <h2><i>Want to see what your personality looks like?</i><br>Send your HEXACO-PI-R results here</h2>
+            <form action="https://formsubmit.co/israelblenn@gmail.com" method="POST" enctype="multipart/form-data">
+              <br><p>Name: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Email:</p>
+              <input type="text" name="name">&nbsp&nbsp
+              <input type="email" name="email" required>
+              <br><br><p>Comment:</p>
+              <input type="text" name="message" size="47"><br><br>
+
+              <label class="button">
+                <input type="file" name="attachment" accept="application/pdf" required>
+                Choose File
+              </label>
+              <button class="button" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a class="cta" href="https://israelblennerhassett.com/">israelblennerhassett.com</a>
+      </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+
+  </body>
+
+</html>
