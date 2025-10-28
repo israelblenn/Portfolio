@@ -573,10 +573,10 @@ function changeTo(animation, destination){
   ;
 
   if (animation == "swap") {
+      document.querySelector(".link-theHarbourAgency").style.display = "flex"
     document.querySelector(".link-markBoChu").style.display = "flex"
     document.querySelector(".link-lismoreBaptist").style.display = "flex"
     document.querySelector(".link-yourSky").style.display = "flex"
-    document.querySelector(".link-visualisingPersonality").style.display = "flex"
     document.getElementById("d1").style.display = "block"
     document.getElementById("d2").style.display = "block"
     document.getElementById("d3").style.display = "block"
@@ -593,7 +593,7 @@ function changeTo(animation, destination){
 
     if (destination == "markBoChu") {
       document.getElementById("d1").style.display = "none" 
-    } else if (destination == "visualisingPersonality") {
+    } else if (destination == "theHarbourAgency") {
       document.getElementById("d3").style.display = "none"
     } else {
       document.getElementById("d2").style.display = "none"
@@ -622,10 +622,10 @@ function changeTo(animation, destination){
       document.querySelector(".workPage").style.display = "none"
       document.querySelector(".mobile-home").style.display = "flex"
 
+      document.querySelector(".link-theHarbourAgency").style.display = "flex"
       document.querySelector(".link-markBoChu").style.display = "flex"
       document.querySelector(".link-lismoreBaptist").style.display = "flex"
       document.querySelector(".link-yourSky").style.display = "flex"
-      document.querySelector(".link-visualisingPersonality").style.display = "flex"
       document.getElementById("d1").style.display = "block"      
       document.getElementById("d2").style.display = "block"
       workPageFooter.style.display = "block"
@@ -696,10 +696,10 @@ let showcase2_offset = (vw+(200+1100+450)*rem)/2*(vw/siteWidth)
 let showcase3_offset = (vw+(200+1100+1100+450)*rem)/2*(vw/siteWidth)
 let showcase4_offset = (vw+(200+1100+1100+1100+450)*rem)/2*(vw/siteWidth)
 
-// let showcase1 = 200+900
-// let showcase2 = 1100+1100
-// let showcase3 = 1100+1100+1100
-// let showcase4 = 1100+1100+1100+1100
+// let showcase2 = 200+900
+// let showcase3 = 1100+1100
+// let showcase4 = 1100+1100+1100
+// let showcase1 = 1100+1100+1100+1100
 
 let showcase1 = 0
 let showcase2 = 800
@@ -745,102 +745,114 @@ if (mobileDevice != true) {
   // limiting values to the actual scrollable area
   let ap = siteWidth/(siteWidth-vh)
 
-  // Animate second showcase label
+  // Animate first showcase label
   gsap.to("#showcase1_1", {
-    text: "Mark",
+    text: "The",
     scrollTrigger: {start: `${showcase1*ap*rem+vw/2} top`, end: `${showcase1*ap*rem+vw/2} top`, scrub: 1},
   })
   gsap.to("#showcase1_2", {
-    text: "Bo",
+    text: "Harbour",
     marginLeft: 4*rem,
     scrollTrigger: {start: `${showcase1*ap*rem+vw/2} top`, end: `${showcase1*ap*rem+vw/2} top`, scrub: 1},
   })
   gsap.to("#showcase1_3", {
-    text: "Chu",
+    text: "Agency",
     marginLeft: 4*rem,
     scrollTrigger: {start: `${showcase1*ap*rem+vw/2} top`, end: `${showcase1*ap*rem+vw/2} top`, scrub: 1},
   })
   gsap.from("#showcase1_1", {
-    text: "Mark",
+    text: "The",
     scrollTrigger: {start: `${(showcase1+800)*ap*rem+vw/2} top`, end: `${(showcase1+800)*ap*rem+vw/2} top`, scrub: 1},
   })
   gsap.from("#showcase1_2", {
-    text: "Bo",
+    text: "Harbour",
     marginLeft: 4*rem,
     scrollTrigger: {start: `${(showcase1+800)*ap*rem+vw/2} top`, end: `${(showcase1+800)*ap*rem+vw/2} top`, scrub: 1},
   })
   gsap.from("#showcase1_3", {
-    text: "Chu",
+    text: "Agency",
     marginLeft: 4*rem,
     scrollTrigger: {start: `${(showcase1+800)*ap*rem+vw/2} top`, end: `${(showcase1+800)*ap*rem+vw/2} top`, scrub: 1},
   })
+  
 
-  // Animate first showcase label
+
+  // Animate second showcase label
   gsap.to("#showcase2_1", {
-    text: "Lismore",
+    text: "Mark",
     scrollTrigger: {start: `${showcase2*ap*rem+vw/2} top`, end: `${showcase2*ap*rem+vw/2} top`, scrub: 1},
   })
   gsap.to("#showcase2_2", {
-    text: "Baptist",
+    text: "Bo",
+    marginLeft: 4*rem,
+    scrollTrigger: {start: `${showcase2*ap*rem+vw/2} top`, end: `${showcase2*ap*rem+vw/2} top`, scrub: 1},
+  })
+  gsap.to("#showcase2_3", {
+    text: "Chu",
     marginLeft: 4*rem,
     scrollTrigger: {start: `${showcase2*ap*rem+vw/2} top`, end: `${showcase2*ap*rem+vw/2} top`, scrub: 1},
   })
   gsap.from("#showcase2_1", {
-    text: "Lismore",
+    text: "Mark",
     scrollTrigger: {start: `${(showcase2+800)*ap*rem+vw/2} top`, end: `${(showcase2+800)*ap*rem+vw/2} top`, scrub: 1},
   })
   gsap.from("#showcase2_2", {
-    text: "Baptist",
+    text: "Bo",
+    marginLeft: 4*rem,
+    scrollTrigger: {start: `${(showcase2+800)*ap*rem+vw/2} top`, end: `${(showcase2+800)*ap*rem+vw/2} top`, scrub: 1},
+  })
+  gsap.from("#showcase2_3", {
+    text: "Chu",
     marginLeft: 4*rem,
     scrollTrigger: {start: `${(showcase2+800)*ap*rem+vw/2} top`, end: `${(showcase2+800)*ap*rem+vw/2} top`, scrub: 1},
   })
 
-  // Animate second showcase label
+  // Animate third showcase label
   gsap.to("#showcase3_1", {
-    text: "Light",
+    text: "Lismore",
     scrollTrigger: {start: `${showcase3*ap*rem+vw/2} top`, end: `${showcase3*ap*rem+vw/2} top`, scrub: 1},
   })
   gsap.to("#showcase3_2", {
-    text: "Pollution",
-    marginLeft: 4*rem,
-    scrollTrigger: {start: `${showcase3*ap*rem+vw/2} top`, end: `${showcase3*ap*rem+vw/2} top`, scrub: 1},
-  })
-  gsap.to("#showcase3_3", {
-    text: "Simulator",
+    text: "Baptist",
     marginLeft: 4*rem,
     scrollTrigger: {start: `${showcase3*ap*rem+vw/2} top`, end: `${showcase3*ap*rem+vw/2} top`, scrub: 1},
   })
   gsap.from("#showcase3_1", {
-    text: "Light",
+    text: "Lismore",
     scrollTrigger: {start: `${(showcase3+800)*ap*rem+vw/2} top`, end: `${(showcase3+800)*ap*rem+vw/2} top`, scrub: 1},
   })
   gsap.from("#showcase3_2", {
-    text: "Pollution",
-    marginLeft: 4*rem,
-    scrollTrigger: {start: `${(showcase3+800)*ap*rem+vw/2} top`, end: `${(showcase3+800)*ap*rem+vw/2} top`, scrub: 1},
-  })
-  gsap.from("#showcase3_3", {
-    text: "Simulator",
+    text: "Baptist",
     marginLeft: 4*rem,
     scrollTrigger: {start: `${(showcase3+800)*ap*rem+vw/2} top`, end: `${(showcase3+800)*ap*rem+vw/2} top`, scrub: 1},
   })
 
-  // Animate third showcase label
+  // Animate fourth showcase label
   gsap.to("#showcase4_1", {
-    text: "Visualising",
+    text: "Light",
     scrollTrigger: {start: `${showcase4*ap*rem+vw/2} top`, end: `${showcase4*ap*rem+vw/2} top`, scrub: 1},
   })
   gsap.to("#showcase4_2", {
-    text: "Personality",
+    text: "Pollution",
+    marginLeft: 4*rem,
+    scrollTrigger: {start: `${showcase4*ap*rem+vw/2} top`, end: `${showcase4*ap*rem+vw/2} top`, scrub: 1},
+  })
+  gsap.to("#showcase4_3", {
+    text: "Simulator",
     marginLeft: 4*rem,
     scrollTrigger: {start: `${showcase4*ap*rem+vw/2} top`, end: `${showcase4*ap*rem+vw/2} top`, scrub: 1},
   })
   gsap.from("#showcase4_1", {
-    text: "Visualising",
+    text: "Light",
     scrollTrigger: {start: `${(showcase4+800)*ap*rem+vw/2} top`, end: `${(showcase4+800)*ap*rem+vw/2} top`, scrub: 1},
   })
   gsap.from("#showcase4_2", {
-    text: "Personality",
+    text: "Pollution",
+    marginLeft: 4*rem,
+    scrollTrigger: {start: `${(showcase4+800)*ap*rem+vw/2} top`, end: `${(showcase4+800)*ap*rem+vw/2} top`, scrub: 1},
+  })
+  gsap.from("#showcase4_3", {
+    text: "Simulator",
     marginLeft: 4*rem,
     scrollTrigger: {start: `${(showcase4+800)*ap*rem+vw/2} top`, end: `${(showcase4+800)*ap*rem+vw/2} top`, scrub: 1},
   })

@@ -470,6 +470,37 @@ section{
 
 
 
+/* The Harbour Agency */
+
+.img-THA1{
+  position: absolute;
+  width: 70%;
+  top: 17.5%;
+  left: 26%;
+  -webkit-filter: var(--shadow);
+          filter: var(--shadow);
+}
+
+.img-THA2{
+  position: absolute;
+  width: 70%;
+  top: 26%;
+  left: 4%;
+  -webkit-filter: var(--shadow);
+          filter: var(--shadow);
+}
+
+.img-THA3{
+  position: absolute;
+  width: 70%;
+  top: 39%;
+  left: 18%;
+  -webkit-filter: var(--shadow);
+          filter: var(--shadow);
+}
+
+
+
 
 /* Mark Bo Chu */
 
@@ -563,16 +594,6 @@ section{
   left: 82.3%;
   -webkit-filter: var(--shadow);
           filter: var(--shadow);
-}
-
-
-/* Visualising Personality */
-
-.img-VP{
-  position: absolute;
-  width: 83%;
-  top: 15.5%;
-  left: 8.5%;
 }
 
 

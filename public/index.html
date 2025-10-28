@@ -55,6 +55,14 @@
             </div>
     
             <ul class="mobile-nav">
+              <li onclick="changeTo('swipe', 'theHarbourAgency')">
+                The Harbour Agency
+                <div>
+                  <button class="miniButton" onclick="openTo('theHarbourAgency')"><img class="expandIcon" src="media/icons/externalLinkSharp.svg"></button>
+                  <img class="goIcon" src="media/icons/chevronRight.svg">
+                </div>
+              </li>
+                <div class="divider"></div>
               <li onclick="changeTo('swipe', 'markBoChu')">
                 Mark Bo Chu
                 <div>
@@ -73,14 +81,6 @@
                 Light Pollution Simulator
                 <div>
                   <button class="miniButton" onclick="openTo('yourSky')"><img class="expandIcon" src="media/icons/externalLinkSharp.svg"></button>
-                  <img class="goIcon" src="media/icons/chevronRight.svg">
-                </div>
-              </li>
-              <div class="divider"></div>
-              <li onclick="changeTo('swipe', 'visualisingPersonality')">
-                Visualising Personality
-                <div>
-                  <button class="miniButton" onclick="openTo('visualisingPersonality')"><img class="expandIcon" src="media/icons/externalLinkSharp.svg"></button>
                   <img class="goIcon" src="media/icons/chevronRight.svg">
                 </div>
               </li>
@@ -109,32 +109,32 @@
 
           <div class="workPageFooter">
             <ul class="mobile-nav">
+              <li class="link-theHarbourAgency" onclick="changeTo('swap', 'theHarbourAgency')">
+                The Harbour Agency
+                <div>
+                  <button class="miniButton" onclick="openTo('theHarbourAgency')"><img class="expandIcon" src="media/icons/externalLinkSharp.svg"></button>
+                  <img class="goIcon" src="media/icons/chevronRight.svg">
+                </div>
+              </li>
+              <div class="divider" id="d1"></div>
               <li class="link-markBoChu" onclick="changeTo('swap', 'markBoChu')">
                 Mark Bo Chu
                 <div>
                   <img class="goIcon" src="media/icons/chevronRight.svg">
                 </div>
               </li>
-              <div class="divider" id="d1"></div>
+              <div class="divider" id="d2"></div>
               <li class="link-lismoreBaptist" onclick="changeTo('swap', 'lismoreBaptist')">
                 Lismore Baptist
                 <div>
                   <img class="goIcon" src="media/icons/chevronRight.svg">
                 </div>
               </li>
-              <div class="divider" id="d2"></div>
+              <div class="divider" id="d3"></div>
               <li class="link-yourSky" onclick="changeTo('swap', 'yourSky')">
                 Light Pollution Simulator
                 <div>
                   <button class="miniButton" onclick="openTo('yourSky')"><img class="expandIcon" src="media/icons/externalLinkSharp.svg"></button>
-                  <img class="goIcon" src="media/icons/chevronRight.svg">
-                </div>
-              </li>
-              <div class="divider" id="d3"></div>
-              <li class="link-visualisingPersonality" onclick="changeTo('swap', 'visualisingPersonality')">
-                Visualising Personality
-                <div>
-                  <button class="miniButton" onclick="openTo('visualisingPersonality')"><img class="expandIcon" src="media/icons/externalLinkSharp.svg"></button>
                   <img class="goIcon" src="media/icons/chevronRight.svg">
                 </div>
               </li>
@@ -161,24 +161,25 @@
   
           <ul class="outlineLabels">
             <li class="focusCursor" id="home" onclick="jumpTo('.content', 'left')">Home</li>
-      
-            <div class="splitShowcaseLabel focusCursor" id="showcase1" onclick="jumpTo('.markBoChu', 'center')">
-              <li id="showcase1_1">M</li>
-              <li id="showcase1_2">B</li>
-              <li id="showcase1_3">C</li>
+
+            <div class="splitShowcaseLabel focusCursor" id="showcase1" onclick="jumpTo('.theHarbourAgency', 'center')">
+              <li id="showcase1_1">T</li>
+              <li id="showcase1_2">H</li>
+              <li id="showcase1_3">A</li>
             </div>
-            <div class="splitShowcaseLabel focusCursor" id="showcase2" onclick="jumpTo('.lismoreBaptist', 'center')">
-              <li id="showcase2_1">L</li>
+            <div class="splitShowcaseLabel focusCursor" id="showcase2" onclick="jumpTo('.markBoChu', 'center')">
+              <li id="showcase2_1">M</li>
               <li id="showcase2_2">B</li>
+              <li id="showcase2_3">C</li>
             </div>
-            <div class="splitShowcaseLabel focusCursor" id="showcase3" onclick="jumpTo('.yourSky', 'center')">
+            <div class="splitShowcaseLabel focusCursor" id="showcase3" onclick="jumpTo('.lismoreBaptist', 'center')">
               <li id="showcase3_1">L</li>
-              <li id="showcase3_2">P</li>
-              <li id="showcase3_3">S</li>
+              <li id="showcase3_2">B</li>
             </div>
-            <div class="splitShowcaseLabel focusCursor" id="showcase4" onclick="jumpTo('.visualisingPersonality', 'center')">
-              <li id="showcase4_1">V</li>
+            <div class="splitShowcaseLabel focusCursor" id="showcase4" onclick="jumpTo('.yourSky', 'center')">
+              <li id="showcase4_1">L</li>
               <li id="showcase4_2">P</li>
+              <li id="showcase4_3">S</li>
             </div>
 
             <li class="focusCursor" onclick="jumpTo('.contact', 'right')">Contact</li>
@@ -218,11 +219,11 @@
                         <!-- <li onclick="jumpTo('.markBoChu', 'center')" class="focusCursor"><span class="itemText">Mark Bo Chu</span><span class="hiddenText">Mark Bo Chu</span></li>
                         <li onclick="jumpTo('.lismoreBaptist', 'center')" class="focusCursor"><span class="itemText">Lismore Baptist</span><span class="hiddenText">Lismore Baptist</span></li>
                         <li onclick="jumpTo('.yourSky', 'center')" class="focusCursor"><span class="itemText">Light Pollution Simulator</span><span class="hiddenText">Light Pollution Simulator</span></li>
-                        <li onclick="jumpTo('.visualisingPersonality', 'center')" class="focusCursor"><span class="itemText">Visualising Personality</span><span class="hiddenText">Visualising Personality</span></li> -->
+                        <li onclick="jumpTo('.theHarbourAgency', 'center')" class="focusCursor"><span class="itemText">Visualising Personality</span><span class="hiddenText">Visualising Personality</span></li> -->
+                        <li onclick="jumpTo('.theHarbourAgency', 'center')" class="focusCursor">The Harbour Agency</li>
                         <li onclick="jumpTo('.markBoChu', 'center')" class="focusCursor">Mark Bo Chu</li>
                         <li onclick="jumpTo('.lismoreBaptist', 'center')" class="focusCursor">Lismore Baptist</li>
                         <li onclick="jumpTo('.yourSky', 'center')" class="focusCursor">Light Pollution Simulator</li>
-                        <li onclick="jumpTo('.visualisingPersonality', 'center')" class="focusCursor">Visualising Personality</li>
                       </ul>
                     </div>
                     <li onclick="jumpTo('.contact', 'right')" class="focusCursor"><span class="itemText">Contact Me</span></li>
@@ -238,6 +239,25 @@
 
 
         <div class="myWork">
+
+          <section class="theHarbourAgency">
+            <div class="workPreview">
+              <h2 class="title">The Harbour Agency</h2>
+              <div class="images">
+                <img class="img-THA1" src="media/previews/thaAbout.png" alt="">
+                <img class="img-THA2" src="media/previews/thaVault.png" alt="">
+                <img class="img-THA3" src="media/previews/thaArtists.jpg" alt="">
+                <!-- <img class="img-VP" src="media/previews/familytree.svg" alt=""> -->
+              </div>
+              <div class="text">
+                <p>Building a website for a leading Sydney music agency designed around a unique modular page structure. It features a highly interactive roster brimming with dynamic animations that contrast bold Swiss-style geometry against a minimalist slate backdrop. </p>
+                <div class="details">
+                  <p><i>October 2025</i></p>
+                  <p>Site coming soon</p>
+                </div>
+              </div>
+            </div>
+          </section>
 
           <section class="markBoChu">
             <div class="workPreview">
@@ -291,22 +311,6 @@
                 <div class="details">
                   <p><i>December 2022</i></p>
                   <button onclick="openTo('yourSky')" class="focusCursor" tabindex="-1">visit live site<img class="expandIcon" src="media/icons/externalLink.svg" alt=""></button>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="visualisingPersonality">
-            <div class="workPreview">
-              <h2 class="title">Visualising Personality</h2>
-              <div class="images">
-                <img class="img-VP" src="media/previews/familytree.svg" alt="">
-              </div>
-              <div class="text">
-                <p>Exploring the challenge of visualising personality data in a way that accurately reflects our humanness; void of the clean boundaries that historical typologies have tended to draw. A data visualisation project presented through the web.</p>
-                <div class="details">
-                  <p><i>August 2022</i></p>
-                  <button onclick="openTo('visualisingPersonality')" class="focusCursor" tabindex="-1">visit live site<img class="expandIcon" src="media/icons/externalLink.svg" alt=""></button>
                 </div>
               </div>
             </div>
